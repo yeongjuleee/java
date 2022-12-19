@@ -158,18 +158,16 @@ public class StudentManage {
 		// 3. 수강신청
 		// 3-1. 과목 목록 출력
 	   private void printSubject() {
-	      SubjectDTO subject = new SubjectDTO();
 	      ArrayList<SubjectDTO> list = subjectDAO.selectAll();
 	      
-	      for(SubjectDTO subject3 : list) {
-	         System.out.println("과목코드 : " + subject3.getCode() + " " + "과목이름 : " + subject3.getSubjectName() );
+	      for(SubjectDTO subject : list) {
+	         System.out.println("과목코드 : " + subject.getCode() + " " + "과목이름 : " + subject.getSubjectName() );
 	      }
 	   }
 	   private void printCourse() {
-	      StdClassDTO course = new StdClassDTO();
 	      ArrayList<StdClassDTO> list = stdClassDAO.selectAll();
-	      for(StdClassDTO course2 : list) {
-	         System.out.println("과목코드 : " + course2.getSubjectCode() + " " + "과목이름: " + course2.getStudentNumber());
+	      for(StdClassDTO course : list) {
+	         System.out.println("과목코드 : " + course.getSubjectCode() + " " + "과목이름: " + course.getStudentNumber());
 	      }
 	      
 	   }
